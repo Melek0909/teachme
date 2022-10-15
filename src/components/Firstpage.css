@@ -1,9 +1,15 @@
+body {
+    background-color: red;
+    height: 100%;
+    margin: 0;
+}
 .Logopart {
     display: flex;
     flex-direction: column;
-    padding-bottom: 80%;
+    height: 120%;
     text-align: center;
-    
+    background-color: white;
+    margin: 0;
 }
 .Firstpage {
     display: flex;
@@ -16,10 +22,21 @@
     background-color: red;
     display: flex;
     flex-direction: column;
-    padding-top: 50%;
-
+    text-align: center;
+    height: 100%;
 }
 input {
     border-radius: 15px;
-    width: 200px;
+    width: 300px;
+    height: 40px;
+}
+p {
+    color: white;
+}
+label {
+    justify-content: space-between;
+}
+button {
+    border-color: white;
+    color: red;
 }
