@@ -1,0 +1,25 @@
+.Logopart {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 80%;
+    text-align: center;
+    
+}
+.Firstpage {
+    display: flex;
+    flex-direction: row;
+}
+.logogmc {
+    padding-top: 50%;
+}
+.SingInpart1 {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50%;
+
+}
+input {
+    border-radius: 15px;
+    width: 200px;
+}
