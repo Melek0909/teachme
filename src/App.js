@@ -6,6 +6,7 @@ import Dashboard from "./components/Dashboard";
 import Header from "./components/Header";
 import LearnerDash from "./components/LearnerDash";
 import TeacherDash from "./components/TeacherDash";
+import StudentSkills from "./components/Skills";
 
 import { useEffect } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";

@@ -1,105 +1,96 @@
-body{
-    height: 100%;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif !important;
-    background-color: white;
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif !important;
+  background-color: white;
 }
 .Teachingpart {
-    height: 100vh;
-    text-align: center;
-    background-color: #c1213f;
-    flex-direction: column;
-    margin: 0;
-    justify-content: space-around;
+  height: 100vh;
+  text-align: center;
+  background-color: #c1213f;
+  flex-direction: column;
+  margin: 0;
+  justify-content: space-around;
 }
 .Learningpart {
-    height: 100vh;
-    text-align: center;
-    background-color: white;
-    flex-direction: column;
-    margin: 0;
-    justify-content: space-around;
+  height: 100vh;
+  text-align: center;
+  background-color: white;
+  flex-direction: column;
+  margin: 0;
+  justify-content: space-around;
 }
 .icanteach {
-    color: #c1213f;
-    font-size:60px;
-    padding-top:10%;
+  color: #c1213f;
+  font-size: 60px;
+  padding-top: 10%;
 }
 .icanlearn {
-    color: white ;
-    font-size:60px;
-    padding-top:10%;
+  color: white;
+  font-size: 60px;
+  padding-top: 10%;
 }
 
 /* checking part */
 
 .container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-
 
 .container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
-
 
 .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border-radius: 6px;
-    border: solid;
-    border-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 6px;
+  border: solid;
+  border-color: black;
 }
-
 
 .container:hover input ~ .checkmark {
-    background-color: #ccc;
+  background-color: #ccc;
 }
-
 
 .container input:checked ~ .checkmark {
-    background-color: #c1213f;
+  background-color: #c1213f;
 }
-
 
 .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
+  content: "";
+  position: absolute;
+  display: none;
 }
-
 
 .container input:checked ~ .checkmark:after {
-    display: block;
+  display: block;
 }
-
 
 .container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-
