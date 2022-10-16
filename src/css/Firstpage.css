@@ -2,11 +2,12 @@ body {
     background-color: red;
     height: 100%;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif !important;
 }
 .Logopart {
     display: flex;
     flex-direction: column;
-    height: 120%;
+    height: 100vh;
     text-align: center;
     background-color: white;
     margin: 0;
@@ -16,19 +17,22 @@ body {
     flex-direction: row;
 }
 .logogmc {
-    padding-top: 50%;
+    padding-top: 40%;
 }
 .SingInpart1 {
     background-color: red;
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: 100%;
+    height: 100vh;
 }
 input {
-    border-radius: 15px;
+    border-radius: 6px;
     width: 300px;
     height: 40px;
+    border-color: white !important;
+    border: none;
+    padding: 12px 20px;
 }
 p {
     color: white;
@@ -37,6 +41,13 @@ label {
     justify-content: space-between;
 }
 button {
-    border-color: white;
-    color: red;
+    border-color: red;
+    color: black;
+    border: solid;
+    border-width: 1px;
+    background-color: white;
+    border-radius: 6px;
+}
+::placeholder{
+    color: black;
 }
