@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
-import Login from "./Firstpage";
+import Login from "./Login";
 const useAuth = () => {
-  const user = true;
+  const user = localStorage.getItem("token");
   return user;
 };
 
