@@ -8,6 +8,8 @@ function Login() {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassord] = useState("");
+  const [errorHandle, setErrorHandle] = useState(null);
+
   const handleLogin = () => {
     axios
       .post("http://localhost:3002/api/users/login", {
@@ -21,7 +23,9 @@ function Login() {
 
         navigate("/dashboard");
       })
-      .catch(function (error) {});
+      .catch(function (error) {
+        setErrorHandle("Wrong Login and Password");
+      });
   };
   return (
     <div className="Firstpage">
@@ -53,9 +57,12 @@ function Login() {
             <div>
               <label>
                 <input
+                  className={`${errorHandle ? "error" : null}`}
                   type="text"
                   placeholder="Type your Username"
-                  style={{ color: "black", boxChadow: "0px" }}
+                  style={{
+                    boxChadow: "0px",
+                  }}
                   value={username}
                   onChange={(e) => {
                     setUsername(e.target.value);
@@ -67,6 +74,7 @@ function Login() {
             <div>
               <label>
                 <input
+                  className={`${errorHandle ? "error" : null}`}
                   type="password"
                   placeholder="Type your password"
                   value={password}
@@ -76,6 +84,9 @@ function Login() {
                 />
               </label>
             </div>
+            {errorHandle ? (
+              <p style={{ margin: 20 }}>Your Credentials are wrong</p>
+            ) : null}
             <br />
             <Button
               onClick={() => {
