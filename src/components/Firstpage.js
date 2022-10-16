@@ -1,10 +1,10 @@
 import React from 'react';
-import Logoofgomycode from './Logogomycode.png'
-import './Firstpage.css'
+import Logoofgomycode from '../images/Logogomycode.png'
+import '../css/Firstpage.css'
 import Button from 'react-bootstrap/Button';
 
 
-function Logogomycode(){
+function Login(){
     return(
     <div className='Firstpage'>
         <div className="col-6 Logopart">
@@ -13,16 +13,16 @@ function Logogomycode(){
             </div>
         </div>
         <div className='col-6 SingInpart1'>
-            <div style={{marginBottom:"120px" }}>
-                <h1 style={{ color:"white" , fontFamily:"Georgia, serif;" , fontSize:"80px"}}>
+            <div>
+                <h1 style={{ color:"white" , fontFamily:"Georgia, serif;" , fontSize:"80px" , paddingTop:"25%"}}>
                     TeachMe...
                 </h1>
             </div>
         <form>
-            <div className='Loginbutton' style={{marginTop:"80px"}}>
+            <div className='Loginbutton' style={{marginTop:"10%"}}>
             <div>
             <label>
-                <input type="text" placeholder='Type your Username'/>
+                <input type="text" placeholder='Type your Username' style={{color:"black" , boxChadow:"0px"}}/>
             </label>
             </div>
             <br/>
@@ -32,9 +32,10 @@ function Logogomycode(){
             </label>
             </div>
             <br/>
-            <div >
+            <Button variant="danger" style={{ backgroundColor:"white" , color:"black", width:"80px" , boxChadow:"1px"}}>Login</Button>
+            {/* <div >
                 <button type="submit">Submit</button>
-            </div>
+            </div> */}
             {/* <Button variant="light" style={{borderColor:"black", borderRadius:"15px" , width:"100px" , color:"black"}}>   submit   </Button>{' '} */}
             </div>
         </form>
@@ -42,4 +43,4 @@ function Logogomycode(){
     </div>
     )
 }
-export default Logogomycode;
+export default Login;
