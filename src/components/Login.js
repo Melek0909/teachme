@@ -21,7 +21,7 @@ function Login() {
         localStorage.setItem("isLoggedIn", response.data.status);
         localStorage.setItem("username", response.data.user.username);
 
-        navigate("/dashboard");
+        navigate("/dashboard", { replace: true });
       })
       .catch(function (error) {
         setErrorHandle("Wrong Login and Password");

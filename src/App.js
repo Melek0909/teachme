@@ -3,9 +3,21 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import PrivateRoutes from "./components/PrivateRoutes";
 import Login from "./components/Login";
 import Dashboard from "./components/Dashboard";
-import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import LearnerDash from "./components/LearnerDash";
+import TeacherDash from "./components/TeacherDash";
+
+import { useEffect } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 function App() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (localStorage.getItem("token") && window.location.pathname === "/") {
+      navigate("/dashboard");
+    }
+  });
   return (
     <>
       <Routes>
@@ -15,12 +27,29 @@ function App() {
             path="/dashboard"
             element={
               <>
+                <Header />
                 <Dashboard />
               </>
             }
           />
-          <Route path="/dashboard/teach" element={<></>} />
-          <Route path="/dashboard/learn" element={<></>} />
+          <Route
+            path="/learner-dashboard"
+            element={
+              <>
+                <Header />
+                <LearnerDash />
+              </>
+            }
+          />
+          <Route
+            path="/teacher-dashboard"
+            element={
+              <>
+                <Header />
+                <TeacherDash />
+              </>
+            }
+          />
         </Route>
       </Routes>
     </>
