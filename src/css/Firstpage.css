@@ -19,7 +19,7 @@ body {
   padding-top: 40%;
 }
 .SingInpart1 {
-  background-color: red;
+  background-color: #c1213f;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -40,7 +40,7 @@ label {
   justify-content: space-between;
 }
 button {
-  border-color: red;
+  border-color: #c1213f;
   color: black;
   border: solid;
   border-width: 1px;
@@ -51,5 +51,5 @@ button {
   color: black;
 }
 .error {
-  color: red;
+  color: #c1213f;
 }

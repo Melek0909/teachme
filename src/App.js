@@ -24,6 +24,14 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route element={<PrivateRoutes />}>
           <Route
+            path="/skills"
+            element={
+              <>
+                <StudentSkills />
+              </>
+            }
+          />
+          <Route
             path="/dashboard"
             element={
               <>
