@@ -11,8 +11,7 @@ function Login() {
   const [errorHandle, setErrorHandle] = useState(null);
 
   const handleLogin = () => {
-    axios
-      .post("http://localhost:3002/api/users/login", {
+    axios.post("http://localhost:3002/api/users/login", {
         username: username,
         password: password,
       })
@@ -21,7 +20,7 @@ function Login() {
         localStorage.setItem("isLoggedIn", response.data.status);
         localStorage.setItem("username", response.data.user.username);
 
-        navigate("/dashboard");
+        navigate("/Skills");
       })
       .catch(function (error) {
         setErrorHandle("Wrong Login and Password");
