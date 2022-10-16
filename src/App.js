@@ -3,7 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import PrivateRoutes from "./components/PrivateRoutes";
 import Login from "./components/Login";
 import Dashboard from "./components/Dashboard";
-import { Routes, Route } from "react-router-dom";
+import {Routes,Route} from "react-router-dom";
+import StudentSkills from "./components/Skills";
 
 function App() {
   return (
@@ -11,6 +12,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route element={<PrivateRoutes />}>
+        <Route
+            path="/Skills"
+            element={
+              <>
+                <StudentSkills/>
+              </>
+            }
+          />
           <Route
             path="/dashboard"
             element={
